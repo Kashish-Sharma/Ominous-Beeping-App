@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="ImageRing7">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+    <style name="ImageRing6">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">32dp</item>
+        <item name="android:tint">@color/colorPrimary</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+    <style name="ImageRing5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">48dp</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+    <style name="ImageRing4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">64dp</item>
+        <item name="android:tint">@color/colorPrimary</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+    <style name="ImageRing3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">80dp</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+    <style name="ImageRing2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">96dp</item>
+        <item name="android:tint">@color/colorPrimary</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+    <style name="ImageRing1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">112dp</item>
+        <item name="android:src">@drawable/ring</item>
+    </style>
+
+</resources>

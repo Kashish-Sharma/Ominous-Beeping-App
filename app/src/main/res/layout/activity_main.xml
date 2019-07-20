@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:weightSum="5"
+        tools:context=".MainActivity">
+
+    <FrameLayout
+            android:id="@+id/activity_main_rings_frame_layout"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        <ImageView
+                android:id="@+id/ring_seventh"
+                style="@style/ImageRing7"/>
+
+        <ImageView
+                android:id="@+id/ring_sixth"
+                style="@style/ImageRing6"/>
+
+        <ImageView
+                android:id="@+id/ring_fifth"
+                style="@style/ImageRing5"/>
+
+        <ImageView
+                android:id="@+id/ring_fourth"
+                style="@style/ImageRing4"/>
+
+        <ImageView
+                android:id="@+id/ring_third"
+                style="@style/ImageRing3"/>
+
+        <ImageView
+                android:id="@+id/ring_second"
+                style="@style/ImageRing2"/>
+
+        <ImageView
+                android:id="@+id/ring_first"
+                style="@style/ImageRing1"/>
+    </FrameLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@string/ominous_beep_app"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"/>
+
+</LinearLayout>
+
+</layout>

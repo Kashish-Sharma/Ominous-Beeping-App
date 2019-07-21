@@ -1,4 +1,4 @@
-# Ominous-Beep-App
+# Ominous-Beeping-App
 
 * Shake your device.<br>
 * App starts beeping.<br>

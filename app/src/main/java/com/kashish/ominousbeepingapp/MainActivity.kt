@@ -68,30 +68,15 @@ class MainActivity : AppCompatActivity() {
         binding.activityMainRingsFrameLayout.visibility = View.INVISIBLE
         mRingsArray.forEach { it.visibility = View.GONE }
         mRingsArray.add(binding.ringFirst)
-        //mRingsArray.add(binding.ringSecond)
         mRingsArray.add(binding.ringThird)
-        //mRingsArray.add(binding.ringFourth)
         mRingsArray.add(binding.ringFifth)
-        //mRingsArray.add(binding.ringSixth)
         mRingsArray.add(binding.ringSeventh)
     }
 
     private fun updateRings() {
-        when(visibleRingNum) {
-            -4 -> {
-                mRingsArray[0].visibility = View.GONE
-                visibleRingNum++
-            }
-            -3 -> {
-                mRingsArray[1].visibility = View.GONE
-                visibleRingNum++
-            }
-            -2 -> {
-                mRingsArray[2].visibility = View.GONE
-                visibleRingNum++
-            }
-            -1 -> {
-                mRingsArray[3].visibility = View.GONE
+        when {
+            visibleRingNum < 0 -> {
+                mRingsArray[ mRingsArray.size + visibleRingNum ].visibility = View.GONE
                 visibleRingNum++
             }
             else -> {
@@ -107,7 +92,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleShakeEvent(shakeCount: Int) {
-        Log.d("MainActivity", "Device shaked $shakeCount times")
         if (mMediaPlayer == null && shakeCount > 1) {
             mMediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
             mMediaPlayer?.start()

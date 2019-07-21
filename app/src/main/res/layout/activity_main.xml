@@ -9,12 +9,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@color/colorPrimary"
-        android:weightSum="5"
+        android:weightSum="4"
         tools:context=".MainActivity">
 
     <FrameLayout
             android:id="@+id/activity_main_rings_frame_layout"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="0dp">
         <ImageView
@@ -51,7 +51,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:text="@string/ominous_beep_app"
-            android:textSize="48sp"
+            android:textSize="64sp"
             android:textStyle="bold"
             android:layout_margin="16dp"
             android:textColor="@color/white"/>

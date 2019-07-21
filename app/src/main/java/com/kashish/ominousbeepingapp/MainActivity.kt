@@ -4,6 +4,7 @@ import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.media.MediaPlayer
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -19,6 +20,7 @@ import com.kashish.ominousbeepingapp.listener.ShakeDetector.OnShakeListener
 class MainActivity : AppCompatActivity() {
 
     private val MAX_TIME = 50.toLong()
+    private val SPEED = 1.5f
 
     private lateinit var binding: ActivityMainBinding
 
@@ -94,6 +96,9 @@ class MainActivity : AppCompatActivity() {
     private fun handleShakeEvent(shakeCount: Int) {
         if (mMediaPlayer == null && shakeCount > 1) {
             mMediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                mMediaPlayer?.playbackParams = mMediaPlayer?.playbackParams?.setSpeed(SPEED)
+            }
             mMediaPlayer?.start()
             mMediaPlayer?.isLooping = true
             binding.activityMainRingsFrameLayout.visibility = View.VISIBLE
